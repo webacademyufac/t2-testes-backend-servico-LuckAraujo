@@ -58,7 +58,7 @@ public class AtendimentoServiceTest {
         atendimentos.add(a2);
     }
 
-    @Test
+    @Test //Luck1
     public void testeAtendimentoGetById() //Atividade
     {
         Mockito.when(repo.findById(1L)).thenReturn(Optional.of(a1));
@@ -66,7 +66,7 @@ public class AtendimentoServiceTest {
         assertEquals(1, result.getId());
     }
 
-    @Test
+    @Test //Luck2
     void testAtendimentoTermoBusca() //Atividade
     {
         Mockito.when(repo.busca("Ana")).thenReturn(atendimentos);
@@ -75,7 +75,7 @@ public class AtendimentoServiceTest {
         assertEquals("Ana", result.getPaciente().getNome());
     }
 
-    @Test
+    @Test //Luck3
     void testSave() //Atividade
     {
         Mockito.when(repo.save(a1)).thenReturn(a1);
